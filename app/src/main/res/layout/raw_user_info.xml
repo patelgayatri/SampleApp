@@ -14,8 +14,8 @@
         tools:ignore="MissingConstraints">
 
     <LinearLayout
-        android:padding="@dimen/normal_margin"
-        android:layout_margin="@dimen/normal_margin"
+        android:padding="10dp"
+        android:layout_margin="@dimen/small_margin"
         android:background="@color/purple_500"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,18 +25,21 @@
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:text="@{user.name_str()}" />
 
         <TextView
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:text="@{user.email_str()}" />
 
         <TextView
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:text="@{user.phone_str()}" />
     </LinearLayout>
     </RelativeLayout>

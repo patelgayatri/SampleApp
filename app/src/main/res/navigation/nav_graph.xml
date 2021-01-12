@@ -20,8 +20,17 @@
         android:name="com.techand.sampleapp.ui.album.AlbumFragment"
         android:label="@string/album_lable"
         tools:layout="@layout/fragment_album">
-    </fragment>
 
+        <action
+            android:id="@+id/action_Album_to_Deatil"
+            app:destination="@id/AlbumDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AlbumDetailFragment"
+        android:name="com.techand.sampleapp.ui.albumDetail.AlbumDetail"
+        android:label="@string/album_lable"
+        tools:layout="@layout/fragment_detail">
+    </fragment>
 
 
 </navigation>

@@ -8,7 +8,7 @@ import com.techand.sampleapp.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import java.net.UnknownHostException
 
-class UserViewModel @ViewModelInject constructor(private val mainRepository: UserInfoRepository) :
+class ViewModel @ViewModelInject constructor(private val mainRepository: UserInfoRepository) :
     ViewModel() {
 
 

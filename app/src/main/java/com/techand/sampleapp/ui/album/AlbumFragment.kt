@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.techand.sampleapp.R
 import com.techand.sampleapp.databinding.FragmentAlbumBinding
-import com.techand.sampleapp.ui.UserViewModel
+import com.techand.sampleapp.ui.ViewModel
 import com.techand.sampleapp.utils.Resource
 import com.techand.sampletest.data.models.Album
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,7 +21,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class AlbumFragment : Fragment(), AlbumAdapter.Listener {
 
-    private val viewModel by viewModels<UserViewModel>()
+    private val viewModel by viewModels<ViewModel>()
     private lateinit var viewDataBinding: FragmentAlbumBinding
     private lateinit var adapter: AlbumAdapter
     var albumId: Int = 0
@@ -89,6 +92,7 @@ class AlbumFragment : Fragment(), AlbumAdapter.Listener {
     }
 
     override fun onItemClick(album: Album, position: Int) {
-
+        val bundle = bundleOf(Pair("detail", album))
+        findNavController().navigate(R.id.action_Album_to_Deatil, bundle)
     }
 }

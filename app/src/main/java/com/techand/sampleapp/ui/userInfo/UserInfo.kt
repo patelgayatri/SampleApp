@@ -12,7 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.techand.sampleapp.R
-import com.techand.sampleapp.ui.UserViewModel
+import com.techand.sampleapp.ui.ViewModel
 import com.techand.sampleapp.data.models.User
 import com.techand.sampleapp.databinding.FragmentUserinfoBinding
 import com.techand.sampleapp.utils.Resource
@@ -22,7 +22,7 @@ import retrofit2.Response
 @AndroidEntryPoint
 class UserInfo : Fragment(), UserInfoAdapter.Listener {
 
-    private val userViewModel by viewModels<UserViewModel>()
+    private val userViewModel by viewModels<ViewModel>()
     private lateinit var viewDataBinding: FragmentUserinfoBinding
     private lateinit var adapter: UserInfoAdapter
 
@@ -30,7 +30,7 @@ class UserInfo : Fragment(), UserInfoAdapter.Listener {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         viewDataBinding = FragmentUserinfoBinding.inflate(inflater, container, false)
         return viewDataBinding.root
     }
