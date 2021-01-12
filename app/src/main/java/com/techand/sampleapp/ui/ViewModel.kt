@@ -3,12 +3,13 @@ package com.techand.sampleapp.ui
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.techand.sampleapp.data.repository.UserInfoRepository
+import com.techand.sampleapp.data.repository.DefaultMainRepository
+import com.techand.sampleapp.data.repository.MainRepository
 import com.techand.sampleapp.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import java.net.UnknownHostException
 
-class ViewModel @ViewModelInject constructor(private val mainRepository: UserInfoRepository) :
+class ViewModel @ViewModelInject constructor(private val mainRepository: DefaultMainRepository) :
     ViewModel() {
 
 

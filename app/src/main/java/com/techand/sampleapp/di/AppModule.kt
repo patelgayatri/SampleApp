@@ -4,7 +4,8 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.techand.sampleapp.data.network.ApiService
 import com.techand.sampleapp.data.network.BASE_URL
-import com.techand.sampleapp.data.repository.UserInfoRepository
+import com.techand.sampleapp.data.repository.DefaultMainRepository
+import com.techand.sampleapp.data.repository.MainRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -34,5 +35,5 @@ object AppModule {
     @Singleton
     @Provides
     fun provideRepository(remoteDataSource: ApiService) =
-        UserInfoRepository(remoteDataSource)
+        DefaultMainRepository(remoteDataSource)
 }

@@ -6,17 +6,14 @@ import com.techand.sampletest.data.models.Album
 import retrofit2.Response
 import javax.inject.Inject
 
-
-class UserInfoRepository @Inject constructor(
+class DefaultMainRepository @Inject constructor(
     private val remoteDataSource: ApiService
-) {
-
-    suspend fun getUser(): Response<List<User>> {
-        return remoteDataSource.getUserData()
+): MainRepository {
+ override suspend fun getUser(): Response<List<User>> {
+       return remoteDataSource.getUserData()
     }
 
-    suspend fun getPhotos(albumId: String): Response<List<Album>> {
-        return remoteDataSource.getPhotos(albumId)
+    override suspend fun getPhotos(albumId: String): Response<List<Album>> {
+       return remoteDataSource.getPhotos(albumId)
     }
-
 }
