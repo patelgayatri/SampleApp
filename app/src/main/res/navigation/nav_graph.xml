@@ -11,7 +11,17 @@
         android:label="@string/user_info"
         tools:layout="@layout/fragment_userinfo">
 
+        <action
+            android:id="@+id/action_User_to_Album"
+            app:destination="@id/AlbumFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/AlbumFragment"
+        android:name="com.techand.sampleapp.ui.album.AlbumFragment"
+        android:label="@string/album_lable"
+        tools:layout="@layout/fragment_album">
+    </fragment>
+
 
 
 </navigation>
