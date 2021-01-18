@@ -4,7 +4,6 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.techand.sampleapp.data.repository.DefaultMainRepository
-import com.techand.sampleapp.data.repository.MainRepository
 import com.techand.sampleapp.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import java.net.UnknownHostException

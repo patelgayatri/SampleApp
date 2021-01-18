@@ -55,7 +55,7 @@ class AlbumFragment : Fragment(), AlbumAdapter.Listener {
     }
 
     private fun setUpListAdapter() {
-        val recyclerView = viewDataBinding.recyclerlist
+        val recyclerView = viewDataBinding.recyclrAlbum
         recyclerView.layoutManager = LinearLayoutManager(this.requireActivity())
         adapter = AlbumAdapter(arrayListOf(), this)
         recyclerView.adapter = adapter
